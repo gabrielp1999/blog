@@ -50,6 +50,7 @@ export function Home() {
   return (
     <>
     <head>
+      <meta name="description" content="Aqui falo um pouco sobre tecnologia e café rsr." />
       <title>Blog Gabriel</title>
     </head>
     <HomeContainer>

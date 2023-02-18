@@ -56,7 +56,7 @@ export function PostDetail() {
     <head>
       <meta property="og:image" content="https://avatars.githubusercontent.com/u/82981798?v=4" />
       <meta property="og:url" content="https://blog-gabriel.vercel.app/" />
-      <title>{post?.title}</title>
+      <title>{post.title ? post.title : "Blog Gabriel"} </title>
       <meta property="description" content={post.body} />
     </head>
       <PostDetailContainer>

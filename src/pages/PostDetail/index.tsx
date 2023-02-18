@@ -81,12 +81,10 @@ export function PostDetail() {
             {post.comments} Comments
           </span>
         </footer>
+          <div className="m-t-30">
+            <ReactMarkdown className="p-img" remarkPlugins={[remarkGfm]}>{post.body}</ReactMarkdown>
+          </div>
       </PostDetailCard>
-      <PostDetailContent>
-        <div>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.body}</ReactMarkdown>
-        </div>
-      </PostDetailContent>
     </PostDetailContainer>
   );
 }

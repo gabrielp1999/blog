@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
     box-shadow: 0 0 0 2px ${props => props.theme['blue']};
   }
 
+  iframe {
+    border-radius: 10px;
+  }
+
   body {
     background: ${props => props.theme['base-background']};
     color: ${props => props.theme['base-text']}; 

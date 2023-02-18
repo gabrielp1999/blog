@@ -39,7 +39,14 @@ export function PersonInfo() {
 
   return (
     <PersonInfoContainer>
-      <img width={148} height={148} src={userInfo?.imgUrl} alt="Person Photo" />
+      {userInfo?.imgUrl &&
+        <img 
+          width={148} 
+          height={148} 
+          src={userInfo?.imgUrl} 
+          alt="Person Photo" 
+        />
+      }
       <div>
         <header>
           <h1>{userInfo?.name}</h1>
@@ -48,7 +55,7 @@ export function PersonInfo() {
           </a>
         </header>
         <main>
-          <p>{userInfo?.description}</p>
+          <p>Desenvolvedor Full Stack <br/> Javascript | Node.JS | React.JS | Typescript | Python | Mongo DB</p>
         </main>
         <footer>
           <span>

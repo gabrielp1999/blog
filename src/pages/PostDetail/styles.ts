@@ -8,6 +8,19 @@ export const PostDetailContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 1rem;
+
+  .m-t-30 {
+    margin-top: 30px;
+  }
+
+  .p-img img{
+    width: 100% !important;
+    margin: 20px 0;
+  }
+  .p-img {
+    width: 100% !important;
+    word-wrap: break-word;
+  }
 `;
 
 export const PostDetailCard = styled.div`

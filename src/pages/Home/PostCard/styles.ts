@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const PostCardContainer = styled(NavLink)`
-width: 100%;
+  width: 100%;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -18,6 +18,8 @@ width: 100%;
 
   transition: border 0.2s;
 
+
+
   cursor: pointer;
   header {
     display: flex;
@@ -28,15 +30,8 @@ width: 100%;
       font-size: 1.125rem;
       line-height: 160%;
       color: ${props => props.theme['base-title']};
-      text-align: justify;
     }
     
-    span {
-      font-size: 0.875rem;
-      line-height: 160%;
-      color: ${props => props.theme['base-span']};
-      
-    }
   }
   
   main {
@@ -44,7 +39,6 @@ width: 100%;
     overflow: hidden;
     p {
       height: 100%;
-      text-align: justify;
       color: ${props => props.theme['base-text']};
     }
   }
@@ -52,4 +46,10 @@ width: 100%;
   &:hover {
     border: 2px solid ${props => props.theme['base-label']};
   }
+  span {
+      font-size: 0.875rem;
+      line-height: 160%;
+      color: ${props => props.theme['base-span']};
+      
+    }
 `;

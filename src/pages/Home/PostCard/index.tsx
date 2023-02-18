@@ -1,5 +1,7 @@
 import { formatDistanceToNow } from "date-fns";
 import { enUS } from "date-fns/locale";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import React from "react";
 import { IPost } from "..";
 import { formatText } from "../../../utils/formatText";
@@ -19,11 +21,11 @@ export function PostCard({ post }: IPostCard) {
     <PostCardContainer to={`/${number}`}>
       <header>
         <h1>{title}</h1>
-        <span>{formattedDate}</span>
       </header>
       <main>
-        <p>{formatText(body, 80)}</p>
+      <ReactMarkdown className="p-img" remarkPlugins={[remarkGfm]}>{formatText(body, 80)}</ReactMarkdown>
       </main>
+        <span>{formattedDate}</span>
     </PostCardContainer>
   );
 }

@@ -55,13 +55,22 @@ export function PersonInfo() {
           </a>
         </header>
         <main>
-          <p>Desenvolvedor Full Stack <br/> Javascript | Node.JS | React.JS | Typescript | Python | Mongo DB</p>
+          <p>Desenvolvedor Full Stack <br/> Javascript | Node.JS | React.JS | Typescript | MongoDB</p>
         </main>
         <footer>
-          <span>
-            <i className="fa-brands fa-github"></i>
-            {userInfo?.githubUsername}
-          </span>
+          <a className="mt-20" href="https://www.linkedin.com/in/gabriel-souza-miranda/" target="_blank">
+            <span>
+              <i className="fa-brands fa-linkedin"></i>
+              gabriel
+            </span>
+          </a>
+
+          <a href={userInfo?.url} target="_blank">
+            <span>
+              <i className="fa-brands fa-github"></i>
+              {userInfo?.githubUsername}
+            </span>
+          </a>
           <span>
             <i className="fa-solid fa-user-group"></i>
             {userInfo?.followers} Followers

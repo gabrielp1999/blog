@@ -13,6 +13,9 @@ export const PersonInfoContainer = styled.div`
   img {
     border-radius: 10px;
   }
+  .mt-20{
+    margin-top: 20px;
+  }
   div {
     width: 100%;
     height: 100%;

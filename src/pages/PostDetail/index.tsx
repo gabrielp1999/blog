@@ -13,6 +13,7 @@ import {
 } from "./styles";
 import { formatDistanceToNow } from "date-fns";
 import { enUS } from "date-fns/locale";
+import ptBR from "date-fns/esm/locale/pt-BR/index.js";
 
 interface IPostDetail {
   title: string;
@@ -37,7 +38,7 @@ export function PostDetail() {
       githubUsername: user.login,
       comments,
       createdAt: formatDistanceToNow(new Date(created_at), {
-        locale: enUS,
+        locale: ptBR,
         addSuffix: true,
       }),
       url: html_url,
@@ -51,39 +52,47 @@ export function PostDetail() {
   }, []);
 
   return (
-    <PostDetailContainer>
-      <PostDetailCard>
-        <header>
-          <NavButton to="/" type="button">
-            <i className="fa-solid fa-chevron-left"></i>
-            Back
-          </NavButton>
-          <a href={post.url} target="_blank">
-            See on Github
-            <i className="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </header>
-        <div>
-          <h1>{post.title}</h1>
-        </div>
-        <footer>
-          <span>
-            <i className="fa-brands fa-github"></i>
-            {post.githubUsername}
-          </span>
-          <span>
-            <i className="fa-solid fa-calendar"></i>
-            {post.createdAt}
-          </span>
-          <span>
-            <i className="fa-solid fa-comment"></i>
-            {post.comments} Comments
-          </span>
-        </footer>
-      </PostDetailCard>
-      <PostDetailContent>
-        <PostContent content={post.body}/>
-      </PostDetailContent>
-    </PostDetailContainer>
+    <>
+    <head>
+      <meta property="og:image" content="https://avatars.githubusercontent.com/u/82981798?v=4" />
+      <meta property="og:url" content="https://blog-gabriel.vercel.app/" />
+      <title>{post?.title}</title>
+      <meta property="description" content={post.body} />
+    </head>
+      <PostDetailContainer>
+        <PostDetailCard>
+          <header>
+            <NavButton to="/" type="button">
+              <i className="fa-solid fa-chevron-left"></i>
+              Back
+            </NavButton>
+            <a href={post.url} target="_blank">
+              See on Github
+              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </header>
+          <div>
+            <h1>{post.title}</h1>
+          </div>
+          <footer>
+            <span>
+              <i className="fa-brands fa-github"></i>
+              {post.githubUsername}
+            </span>
+            <span>
+              <i className="fa-solid fa-calendar"></i>
+              {post.createdAt}
+            </span>
+            <span>
+              <i className="fa-solid fa-comment"></i>
+              {post.comments} Comentarios
+            </span>
+          </footer>
+        </PostDetailCard>
+        <PostDetailContent>
+          <PostContent content={post.body}/>
+        </PostDetailContent>
+      </PostDetailContainer>
+    </>
   );
 }

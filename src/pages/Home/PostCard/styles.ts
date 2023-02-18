@@ -27,7 +27,7 @@ export const PostCardContainer = styled(NavLink)`
     gap: 1rem;
     h1 {
       font-weight: 700;
-      font-size: 1.125rem;
+      font-size: 1.7rem;
       line-height: 160%;
       color: ${props => props.theme['base-title']};
     }

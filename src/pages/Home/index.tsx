@@ -73,25 +73,6 @@ export function Home() {
           ))}
 
       </PostsSection>
-
-
-          <ListSection>
-
-            <iframe src="https://smart-biblia-nextjs.vercel.app" width="100%" height="560px" />
-
-          </ListSection>
-
-          <ListSection>
-
-           <iframe src="https://gabrielp1999.github.io/tabela-fipe-react/" width="100%" height="560px" />
-
-          </ListSection>
-
-          <ListSection>
-
-            <iframe src="https://gabrielp1999.github.io/calculadora-react/" width="100%" height="560px" />
-
-          </ListSection>
       </HomeContent>
     </HomeContainer>
   );

@@ -65,7 +65,6 @@ export const ListSection = styled.div`
 
 export const PostsSection = styled.div`
   display: grid;
-  grid-template-columns: repeat(2,1fr);
   gap: 2rem;
   
   @media (max-width: 950px) {

@@ -48,6 +48,10 @@ export function Home() {
   console.log(postsSearch)
 
   return (
+    <>
+    <head>
+      <title>Blog Gabriel</title>
+    </head>
     <HomeContainer>
       <PersonInfo></PersonInfo>
       <HomeContent>
@@ -75,5 +79,6 @@ export function Home() {
       </PostsSection>
       </HomeContent>
     </HomeContainer>
+    </>
   );
 }

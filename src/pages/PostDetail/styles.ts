@@ -29,11 +29,15 @@ export const PostDetailCard = styled.div`
   width: 100%;
   height: auto;
   background: ${props => props.theme['base-profile']};
-  padding:  2rem;
+  padding: 2rem;
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width:500px) {
+    padding: 2rem 1rem;
+  }
 
   header {
     display: flex;

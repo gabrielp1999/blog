@@ -7,6 +7,10 @@ export const PostContentContainer = styled.section`
   padding: 2.5rem 2rem;
   margin-bottom: 8rem;
 
+  @media (max-width:500px) {
+    padding: 1rem 0;
+  }
+
   h1,
   h2,
   h3 {

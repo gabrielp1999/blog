@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { PostContent } from './components/PostContent'
 
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 import remarkGfm from "remark-gfm";
 import { api } from "../../lib/axios";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import {
   NavButton,
   PostDetailCard,
@@ -81,10 +80,10 @@ export function PostDetail() {
             {post.comments} Comments
           </span>
         </footer>
-          <div className="m-t-30">
-            <ReactMarkdown className="p-img" remarkPlugins={[remarkGfm]}>{post.body}</ReactMarkdown>
-          </div>
       </PostDetailCard>
+      <PostDetailContent>
+        <PostContent content={post.body}/>
+      </PostDetailContent>
     </PostDetailContainer>
   );
 }

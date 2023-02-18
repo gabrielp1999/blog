@@ -14,6 +14,7 @@ export const PostDetailContainer = styled.div`
   }
 
   .p-img img{
+    word-spacing: 1rem;
     width: 100% !important;
     margin: 20px 0;
   }
@@ -111,7 +112,6 @@ export const NavButton = styled(NavLink)`
 export const PostDetailContent = styled.main`
   max-width: 864px;
   width: 100%;
-  padding: 2.5rem;
   white-space: pre-wrap;
   overflow: hidden;
   div {

@@ -26,7 +26,7 @@ export function Home() {
     const response = await api.get(
       `search/issues?q=${
         query ? query : ""
-      }%20repo:${"gabrielp1999"}/blog`
+      }%20label:published%20repo:${"gabrielp1999"}/blog`
     );
     setPosts(response.data.items);
     setPostsSearch(response.data.items)

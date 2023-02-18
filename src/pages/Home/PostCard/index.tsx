@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 import React from "react";
 import { IPost } from "..";
 import { formatText } from "../../../utils/formatText";
-import { PostCardContainer } from "./styles";
+import { PostCardContainer, PostItemContent } from "./styles";
 
 interface IPostCard {
   post: IPost;
@@ -23,7 +23,7 @@ export function PostCard({ post }: IPostCard) {
         <h1>{title}</h1>
       </header>
       <main>
-      <ReactMarkdown className="p-img" remarkPlugins={[remarkGfm]}>{formatText(body, 80)}</ReactMarkdown>
+      <PostItemContent className="p-img">{body}</PostItemContent>
       </main>
         <span>{formattedDate}</span>
     </PostCardContainer>

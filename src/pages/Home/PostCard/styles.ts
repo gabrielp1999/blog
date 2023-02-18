@@ -52,4 +52,15 @@ export const PostCardContainer = styled(NavLink)`
       color: ${props => props.theme['base-span']};
       
     }
+
 `;
+export const PostItemContent = styled.p`
+  font-size: 1.125rem;
+  line-height: 160%;
+  color: #AFC2D4;
+  overflow: hidden;
+  text-overflow: ellipsis; //os 3 potinhos
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; //número máximo de linha que o parágrafo terá, tudo depois é representado pelo ...
+`
